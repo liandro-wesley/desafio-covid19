@@ -48,7 +48,7 @@
 .shadow-large{box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;}
 .shadow-none {box-shadow: none !important;}
 
-*{margin:0;padding:0;outline:none;box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;-moz-box-sizing: border-box;}
+*{scroll-behavior: smooth;margin:0;padding:0;outline:none;box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;-moz-box-sizing: border-box;}
 body,html{width: 100%;height: 100%;}
 html {font-family: sans-serif;line-height: 1.15;-webkit-text-size-adjust: 100%;-webkit-tap-highlight-color: rgba(0, 0, 0, 0);}
 body{background-color: var(--light);}
@@ -116,7 +116,7 @@ li{
     justify-content: space-around;
     flex-flow: row wrap;
     align-items: center;
-    margin-right: 20px;
+    margin-right: 5px;
     border-radius: 4px;
     padding: 20px;
     display: flex;
@@ -127,10 +127,8 @@ li{
 .card-state p{font-family: "Roboto-leve", sans-serif;font-size: 18px;}
 .card-state .state-image img{width: 50px;animation: bounceImage 1s ease-in-out infinite;}
 
-.state-content,.state-image{
-    animation: moveFromLeft 1s ease-in-out forwards;
-}
-
+.state-content,.state-image{animation: moveFromLeft 1s ease-in-out forwards;}
+    
 .state-red{border-bottom: 3px solid var(--red-dark);}
 .state-red h3{color: var(--red-dark);}
 
@@ -140,10 +138,81 @@ li{
 .state-blue{border-bottom: 3px solid var(--blue-cian);}
 .state-blue h3{color: var(--blue-cian);}
 
+/*CONFIGURAÇÕES DOS CARDS DE NOTÍCIAS*/
+
+.blog-container{
+    flex-flow: row nowrap;
+    margin: 0 auto;
+    margin-top: 25px;
+    display: flex;
+    margin-bottom: 21px;
+    
+}
+.blog-card{
+    animation: moveFromBottom 1s ease-in-out forwards;
+    border: 1px solid var(--blue-light);
+    margin-left: auto;
+    margin-right: 5px;
+    margin-bottom: 20px;
+    width: 35%;
+    padding: 0px;
+}
+.blog-card .blog-image img{  
+    transition: all .3s;
+    position: relative;
+    height: 232.85px;
+    width: 100%;
+}
+.blog-card .blog-image img:hover{
+    filter: brightness(70%);
+}
+.blog-card .blog-content{
+    overflow: hidden;
+    position: relative;
+    max-width: 300px;
+    margin: 0 auto;
+    top: -40px;
+}
+.blog-card .blog-image .date{
+    font-family: "Roboto-normal",sans-serif;
+    background-color: var(--blue-cian);
+    justify-content:center;
+    color: var(--light);
+    align-items: center;
+    text-align: center;
+    position:relative;
+    display:flex;
+    height:50px;
+    width:100px;
+    top:-54px;
+}
+.blog-card .blog-link{
+    justify-content: flex-end;
+    display: flex;
+}
+
+.blog-card .blog-content h3{font-family: "Roboto-normal",sans-serif;margin-bottom: 15px;}
+.blog-card .blog-content p{font-family: "Roboto-leve",sans-serif;margin-bottom: 15px;}
+.blog-card .blog-link a{font-family: "Roboto-normal",sans-serif; margin-right: 15px;margin-bottom: 15px;}
+.blog-card .blog-link a:hover{text-decoration: underline;}
+
+.rodape{
+    font-family: "Roboto-normal",sans-serif;
+    justify-content: space-around;
+    flex-flow: row nowrap;
+    align-items: center;
+    font-size: 16px;
+    display: flex;
+    height: 50px;
+    background-color: var(--blue-cian);
+    color: var(--light);
+}
 
 @keyframes bounceImage{0%,100%{-webkit-transform:translateY(-8px);transform:translateY(-8px)}50%{-webkit-transform:translateY(-4px);transform:translateY(-4px)}}
 @keyframes fadeElement{from{opacity: 0;transform: scale(0.9);}to{opacity: 1;transform: scale(1);}}
 @keyframes moveFromLeft{from{opacity: 0;transform: translateX(-35%);}to{opacity: 1;transform: translateX(0);}}
+@keyframes moveFromBottom{from{opacity: 1;transform: translateY(10%);}to{opacity: 1;transform: translateY(0);}}
+
 
 @media only screen and (max-width: 768px){
     .sidebar .sidebar-nav{
@@ -163,6 +232,18 @@ li{
     .card-state{
         margin-bottom: 10px;
         width: 100%;
+    }
+    .blog-container{
+        margin: 0 auto;
+        display: block;
+        width: 95%;
+    }
+    .blog-card{
+        width: 100%;
+        margin-top: 20px;
+    }
+    .blog-card .blog-content{
+        max-width: none;
     }
 }
 @media only screen and (max-width: 425px){
