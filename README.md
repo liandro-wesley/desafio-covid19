@@ -9,6 +9,6 @@
 
 O projeto foi desenvolvido durante o programa Hiring Coders oferecidos pela Gama Academy. Tem como objetivo avaliar o desempenho nas tecnologias base da web.
 
-. HTML5
-. CSS3
+* HTML5
+* CSS3
 
