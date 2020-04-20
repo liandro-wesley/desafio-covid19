@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        
         <meta charset="UTF-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -11,8 +10,8 @@
         <meta name="author" content="Liandro Wesley">
         <meta name="description" content="O covid19 é um site desenvolvido com o objetivo de atender o desafio proposto durante o programa da Hiring Coders">
         <meta name="subject" content="Notícias sobre o novo coronavirus">
-        <meta name="robots" content="index,follow">
-        <meta name="googlebot" content="index,follow">
+        <meta name="robots" content="noindex">
+        <meta name="googlebot" content="noindex">
         <meta name="google" content="notranslate">
         <meta name="referrer" content="never">
         <meta name="url" content="https://desafio-covid19.netlify.app/">
@@ -47,44 +46,15 @@
         <title>COVID-19</title>
     </head>
     <body>
-        <header class="width-100 sidebar shadow-small">
-            <nav class="width-100 sidebar-nav ">
-                <a href="/"><img class="sidebar-logo" src="assets/images/logo_covid19.svg" alt="covid-19"></a>
-                
-                <ul class="sidebar-list">
-                    <li class="sidebar-item"><a class="sidebar-link" href="/">Home</a></li>
-                    <li class="sidebar-item"><a class="sidebar-link" href="sobre.html">Sobre</a></li>
-                    <li class="sidebar-item"><a class="sidebar-link" href="saiba-mais.html">Saiba mais</a></li>
-                    <li class="sidebar-item"><a class="btn btn-blue" href="contato.html">Contato</a></li>
-                </ul>
-            </nav>
-        </header>
         <main>
-            <section class="form-container width-75">
-                <form class="form" action="send-success.html" method="POST" data-netlify="true">
-                    <div class="form__group">
-                        <label for="name">Seu nome <span>(obrigatório)</span></label>
-                        <input class="shadow-small" type="text" name="name" id="name" required autofocus>
-                    </div>
-                    <div class="form__group">
-                        <label for="email">Seu e-mail <span>(obrigatório)</span></label>
-                        <input class="shadow-small" type="email" name="email" id="email" required>
-                    </div>
-                    <div class="form__group">
-                        <label for="mensage">Sua mensagem <span>(obrigatório)</span></label>
-                        <textarea class="shadow-small" name="mensage" id="mensage"" cols="30" rows="10"></textarea>
-                    </div>
-                    <div class="form__group">
-                        <input class="btn btn-blue width-100" type="submit" value="Enviar mensagem">
-                    </div>
-                    
-                </form>
-            </section>
+            <div class="success-container">
+                <div class="success-msg shadow-large">
+                    <h3>Obrigado!</h3>
+                    <p>Sua mensagem foi enviada com sucesso!</p>
+                    <a href="index.html"><i class="fas fa-arrow-left"></i>&nbsp;Voltar à página inicial</a>
+                </div>
+            </div>
         </main>
-
-        <footer class="width-100 rodape">
-            <p>Criado com <i class="fas fa-heart"></i> por <a rel="noreferrer" href="https://www.linkedin.com/in/liandrowesley/" target="_blank">Liandro Wesley</a></p>
-        </footer>
         <!--Import FontAwesome pack-->
         <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     </body>

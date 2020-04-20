@@ -381,7 +381,25 @@ textarea:focus{
     padding: 10px;
 }
 
+.success-container{
+    background-color: var(--blue-cian);
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    color: var(--dark);
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+.success-msg{
+    background-color: var(--light);
+    border-radius: 4px;
+    padding: 40px;
+}
 
+.success-msg h3,p,a{
+    margin-bottom: 15px;
+}
 @keyframes bounceImage{0%,100%{-webkit-transform:translateY(-8px);transform:translateY(-8px)}50%{-webkit-transform:translateY(-4px);transform:translateY(-4px)}}
 @keyframes fadeElement{from{opacity: 0;transform: scale(0.9);}to{opacity: 1;transform: scale(1);}}
 @keyframes moveFromLeft{from{opacity: 0;transform: translateX(-35%);}to{opacity: 1;transform: translateX(0);}}
