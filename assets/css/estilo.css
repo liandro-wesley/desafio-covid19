@@ -31,7 +31,7 @@
 .btn{
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     -webkit-appearance: button;
-    padding: .375rem .75rem;
+    padding: 12px;
     border-radius: .25rem;
     vertical-align: middle;
     white-space: nowrap;
@@ -40,6 +40,7 @@
     line-height: 1.5;
     cursor: pointer;
     outline: none;
+    border: none;
 }
 .btn-block{display:block;width:100%;}
 
@@ -49,7 +50,6 @@
     transition: all .3s;
     border-radius: 30px;
     color: var(--light);
-    padding: 12px;
 }
 .btn-blue:hover{opacity: 95%;}
 
@@ -331,16 +331,63 @@ li{
 #sair:target{
     display: flex;
 }
+/*CONFIGURAÇÕES DO FORMULÁRIO*/
+input, textarea{
+    font-family: "Roboto-medio",sans-serif;
+    border: 1px solid var(--blue-light);
+    background-color: var(--light);
+    border-radius: 4px;
+    padding: 8px 15px;
+    line-height: 1.5;
+
+}
+input:focus{
+    border: 1.2px solid var(--blue-dark);
+    outline: medium;
+}
+textarea:focus{
+    border: 1.2px solid var(--blue-dark);
+    outline: medium;
+}
+.form-container{
+    animation: fadeElement .5s ease-in-out forwards;
+    flex-flow: column nowrap;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 39px;
+    display: flex;
+    margin-bottom: 127px;
+}
+.form .form__group{
+    animation: moveFromLeft .6s ease-in-out forwards;
+    flex-flow: column wrap;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    display: flex;
+    width: 50%;
+}
+.form .form__group label{
+    font-family: "Roboto-normal",sans-serif;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+.form .form__group label span{
+    font-family: "Roboto-leve",sans-serif;
+    color: var(--red-light);
+    font-size: 12px;
+}
+.form .form__group input.btn{
+    font-size: 16px;
+    padding: 10px;
+}
+
+
 @keyframes bounceImage{0%,100%{-webkit-transform:translateY(-8px);transform:translateY(-8px)}50%{-webkit-transform:translateY(-4px);transform:translateY(-4px)}}
 @keyframes fadeElement{from{opacity: 0;transform: scale(0.9);}to{opacity: 1;transform: scale(1);}}
 @keyframes moveFromLeft{from{opacity: 0;transform: translateX(-35%);}to{opacity: 1;transform: translateX(0);}}
 @keyframes moveFromRight{from{opacity: 0;transform: translateX(35%);}to{opacity: 1;transform: translateX(0);}}
 @keyframes moveFromBottom{from{opacity: 1;transform: translateY(10%);}to{opacity: 1;transform: translateY(0);}}
 @keyframes moveFromTop{from{opacity: 1;transform: translateY(-90%);}to{opacity: 1;transform: translateY(0);}}
-
-
-
-
 
 @media only screen and (max-width: 1024px){
     .modal-container .modal-close{
@@ -395,6 +442,12 @@ li{
         width: 90%;
     }
     .btn-blue{width: 40%;margin-bottom: 10px;}  
+    .form .form__group{
+        width: 100%;
+    }
+    .form .form__group input.btn{
+        width: 100%;
+    }
 }
 
 @media only screen and (max-width: 425px){
