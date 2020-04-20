@@ -31,7 +31,7 @@
 .btn{
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     -webkit-appearance: button;
-    padding: 12px;
+    padding: 0.375rem 0.75rem;
     border-radius: .25rem;
     vertical-align: middle;
     white-space: nowrap;
@@ -50,6 +50,7 @@
     transition: all .3s;
     border-radius: 30px;
     color: var(--light);
+    padding: 15px;
 }
 .btn-blue:hover{opacity: 95%;}
 
@@ -227,7 +228,7 @@ li{
 /*CONFIGURAÇÃO DA PÁGINA SAIBA MAIS*/
 .main-content{
     margin-top: 30px;
-    min-height: 606px;
+    min-height: 591px;
 }
 .source-container{
     animation: fadeElement .3s ease-in forwards;
@@ -356,7 +357,7 @@ textarea:focus{
     margin: 0 auto;
     margin-top: 39px;
     display: flex;
-    margin-bottom: 127px;
+    margin-bottom: 112px;
 }
 .form .form__group{
     animation: moveFromLeft .6s ease-in-out forwards;
@@ -392,7 +393,7 @@ textarea:focus{
     width: 100%;
 }
 .success-msg{
-    animation: fadeElement .5s ease-in-out forwards;
+    animation: fadeElement 1s ease-in-out forwards;
     background-color: var(--light);
     border-radius: 4px;
     padding: 40px;
@@ -400,6 +401,51 @@ textarea:focus{
 
 .success-msg h3,p,a{
     margin-bottom: 15px;
+}
+/*CONFIGURAÇÕES DA PÁGINA SOBRE*/
+.about-container{
+    animation: fadeElement .7s ease-in-out forwards;
+    border-radius: 4px;
+    margin: 0 auto;
+    margin-top: 40px;
+    padding: 30px;
+    display: flex;
+    margin-bottom: 214px;
+
+}
+.about-container .about-header{
+    animation: moveFromBottom 1s ease-in-out forwards;
+    flex-flow: column wrap;
+    display: flex;
+}
+.about-container .about-header img{
+    border-radius: 50%;
+    align-self: center;
+    width: 200px;
+    filter: brightness(90%);
+}
+.about-container .about-header h3{
+    font-family: "Roboto-leve",sans-serif;
+    color: var(--dark);
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 15px;
+    font-size: 25px;
+}
+.about-container .about-content{
+    animation: moveFromBottom 1s ease-in-out forwards;
+    font-family: "Roboto-leve",sans-serif;
+    text-align: justify;
+    margin-left: 20px;
+}
+.about-container .about-content p{
+    line-height: 1.5;
+}
+.about-container .about-content .about-links a{
+    color: var(--blue-dark);
+    margin-right: 5px;
+    font-size: 25px;
+    
 }
 @keyframes bounceImage{0%,100%{-webkit-transform:translateY(-8px);transform:translateY(-8px)}50%{-webkit-transform:translateY(-4px);transform:translateY(-4px)}}
 @keyframes fadeElement{from{opacity: 0;transform: scale(0.9);}to{opacity: 1;transform: scale(1);}}
@@ -467,6 +513,15 @@ textarea:focus{
     .form .form__group input.btn{
         width: 100%;
     }
+    .about-container{
+        flex-flow: column wrap;
+    }
+    .about-container .about-header{
+        width: 100%;
+    }
+    .about-container .about-content{
+        margin-top: 15px;
+    }
 }
 
 @media only screen and (max-width: 425px){
@@ -481,6 +536,7 @@ textarea:focus{
     .blog-container{
         width: 95%;
     }
+    .about-container{width: 100%;}
     
 }
 @media only screen and (max-width: 375px){
