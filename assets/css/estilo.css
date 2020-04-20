@@ -392,6 +392,7 @@ textarea:focus{
     width: 100%;
 }
 .success-msg{
+    animation: fadeElement .5s ease-in-out forwards;
     background-color: var(--light);
     border-radius: 4px;
     padding: 40px;
