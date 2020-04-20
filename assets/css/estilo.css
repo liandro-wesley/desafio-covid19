@@ -209,6 +209,7 @@ li{
     justify-content: space-around;
     flex-flow: row nowrap;
     align-items: center;
+    margin-top: auto;
     font-size: 16px;
     display: flex;
     height: 50px;
@@ -226,7 +227,7 @@ li{
 /*CONFIGURAÇÃO DA PÁGINA SAIBA MAIS*/
 .main-content{
     margin-top: 30px;
-    margin-bottom: 332px;
+    min-height: 606px;
 }
 .source-container{
     animation: fadeElement .3s ease-in forwards;
@@ -246,7 +247,7 @@ li{
     width: 100%;
 }
 .plus-container{
-    animation: moveFromBottomSmooth 1s ease-in-out forwards;
+    animation: fadeElement 1s ease-in-out forwards;
     justify-content: flex-start;
     flex-flow: row wrap;
     align-items: center;
@@ -284,7 +285,7 @@ li{
     position: absolute;
     display: none;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     top: 0;
 }
 .modal-container .modal-content{
@@ -292,8 +293,8 @@ li{
     background-color: var(--light);
     border-radius: 4px;
     padding: 5px;
-    height: 60%;
-    width: 60%;
+    height: 60vh;
+    width: 60vw;
     
 }
 
@@ -336,12 +337,17 @@ li{
 @keyframes moveFromRight{from{opacity: 0;transform: translateX(35%);}to{opacity: 1;transform: translateX(0);}}
 @keyframes moveFromBottom{from{opacity: 1;transform: translateY(10%);}to{opacity: 1;transform: translateY(0);}}
 @keyframes moveFromTop{from{opacity: 1;transform: translateY(-90%);}to{opacity: 1;transform: translateY(0);}}
-@keyframes moveFromBottomSmooth{from{opacity: 1;transform: translateY(50%);}to{opacity: 1;transform: translateY(0);}}
 
 
 
 
 
+@media only screen and (max-width: 1024px){
+    .modal-container .modal-close{
+        top: -157px;
+        left: -55px;
+    }
+}
 @media only screen and (max-width: 768px){
     .sidebar .sidebar-nav{
         flex-flow: column wrap;
