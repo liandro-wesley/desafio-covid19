@@ -23,8 +23,10 @@ Durante o treinamento da Hiring Coders, um desafio foi proposto:
 ----
 * HTML5
 * CSS3
+
+
 💬 Fale comigo
-------------------
+---
 [*Entre em contato comigo*](https://www.linkedin.com/in/liandro-wesley)
 
 Obrigado por chegar até aqui! Este projeto foi feito com muito ❤
